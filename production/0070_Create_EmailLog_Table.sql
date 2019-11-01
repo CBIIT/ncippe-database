@@ -1,0 +1,9 @@
+USE biobank;
+CREATE TABLE `EmailLog` (
+  `EmailLogId` INT NOT NULL AUTO_INCREMENT,
+  `RecipientAddress` VARCHAR(127) NOT NULL,
+  `Subject` VARCHAR(256) NOT NULL,
+  `Body` VARCHAR(8192) NOT NULL,
+  `EmailRequestedOn` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `EmailSentOn` DATETIME NULL,
+  PRIMARY KEY (`EmailLogId`));
