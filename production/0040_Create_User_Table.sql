@@ -5,7 +5,7 @@ CREATE TABLE `User` (
   `FirstName` varchar(45) DEFAULT NULL,
   `LastName` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
-  `PatientID` VARCHAR(8) DEFAULT NULL,
+  `PatientID` VARCHAR(32) DEFAULT NULL,
   `PhoneNumber` varchar(10) DEFAULT NULL,
   `AllowEmailNotification` tinyint(4) NOT NULL DEFAULT '1',
   `RoleId` int(11) NOT NULL,
