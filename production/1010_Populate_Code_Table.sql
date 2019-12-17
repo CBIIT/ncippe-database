@@ -7,7 +7,8 @@ values
     ( 'PPE_ADMIN', 'Administrator of the PPE Portal', @codeCategoryId, 1),
     ( 'PPE_CRC', 'Clinical Research Coordinator', @codeCategoryId, 1 ),
     ( 'PPE_BSSC', 'BioSpecimen Sample Site Coordinator', @codeCategoryId, 1 ),
-    ( 'PPE_MOCHA_ADMIN', 'Mocha admin who can upload test results', @codeCategoryId, 1);
+    ( 'PPE_MOCHA_ADMIN', 'Mocha admin who can upload test results', @codeCategoryId, 1),
+    ( 'PPE_CONTENT_EDITOR', 'PPE Content Editor', @codeCategoryId, 1);
 	
 set @codeCategoryId = (select CodeCategoryId from CodeCategory where Name='FILE_TYPE');	
 insert into Code (CodeName, Description, CodeCategoryId, IsActive)
