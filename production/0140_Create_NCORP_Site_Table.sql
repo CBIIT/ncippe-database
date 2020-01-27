@@ -1,6 +1,7 @@
 CREATE TABLE `biobank`.`NCORPSite` (
   `NCORPSiteId` INT NOT NULL AUTO_INCREMENT,
   `NCORPSiteName` VARCHAR(128) NOT NULL,
+  `NCORPSiteStatusCodeId` INT(11) NOT NULL,
   `NCORPSiteContactAddressId` INT(11) NOT NULL,
   `LastRevisedDate` DATETIME NOT NULL DEFAULT NOW(),
   `LastRevisedUser` INT(11) NOT NULL,
@@ -15,6 +16,7 @@ CREATE TABLE `biobank`.`NCORPSite` (
     REFERENCES `biobank`.`NCORPSitePOC` (`NCORPSitePOCId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
+  constraint `FK_NCORPSite_SiteStatusCodeId` FOREIGN KEY (`NCORPSiteStatusCodeId`) REFERENCES `Code` (`CodeId`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_NCORPSite_ParentSiteId`
     FOREIGN KEY (`ParentSiteId`)
     REFERENCES `biobank`.`NCORPSite` (`NCORPSiteId`)
