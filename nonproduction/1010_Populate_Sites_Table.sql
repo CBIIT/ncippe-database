@@ -1,0 +1,3 @@
+
+INSERT INTO `biobank`.`NCORPSite` (`NCORPSiteName`, `CTEPId`, `IsActive`, `LastRevisedUser`, `StreetAddressLine1`, `City`, `State`, `ZipCode`, `PhoneNumber`, `POCName`, `Latitude`, `Longitude`) VALUES ('Mercy Hospital Fort Smith', 'AR012', '1', '1', '7301 Rogers Avenue', 'Fort Smith', 'Arkansas', '72903', '8003789373', 'Donald Duck', '35.356502', '-94.352585');
+INSERT INTO `biobank`.`NCORPSite` (`NCORPSiteName`, `CTEPId`, `IsActive`, `LastRevisedUser`, `StreetAddressLine1`, `City`, `State`, `ZipCode`, `PhoneNumber`, `POCName`, `Latitude`, `Longitude`) VALUES ('Northside Hospital', 'GA031', '1', '1', '1000 Johnson Ferry Road Northeast', 'Atlanta', 'Georgia', '30342', '4043033355', 'Mickey Mouse', '33.908332', '-84.352865');

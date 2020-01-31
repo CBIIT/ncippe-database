@@ -30,5 +30,11 @@ insert into Code (CodeId, CodeName, Description, CodeCategoryId, IsActive)
 values
 	(301, 'PPE_WITHDRAW_SURVEY_QUESTION', 'Survey questions to be asked when patient is withdrawn from biobank participation', @codeCategoryId, 1);
 
+SET @codeCategoryId = (select CodeCategoryId from CodeCategory where Name='NCORP_SITE_STATUS_TYPE');
+INSERT INTO Code (CodeId, CodeName, Description, CodeCategoryId, IsActive)
+VALUES
+	(401, 'PENDING', 'NCORP Site is pending acceptance into protocol', @codeCategoryId, 1),
+    (402, 'ACTIVE', 'NCORP Site is actively participating in protocol', @codeCategoryId, 1),
+    (403, 'WITHDRAWN', 'NCORP Site is no longer participating in protocol', @codeCategoryId, 1);
     
     
