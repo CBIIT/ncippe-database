@@ -13,6 +13,8 @@ CREATE TABLE biobank.NCORPSite (
   ZipCode VARCHAR(10) NOT NULL,
   PhoneNumber VARCHAR(10) NOT NULL,
   POCName VARCHAR(32) NOT NULL,
+  Latitude VARCHAR(11) NOT NULL,
+  Longitude VARCHAR(11) NOT NULL,
   PRIMARY KEY (NCORPSiteId),
   INDEX FK_NCORPSite_LastRevisedUserId_idx (LastRevisedUser ASC) VISIBLE,
   CONSTRAINT FK_NCORPSite_ParentSiteId
