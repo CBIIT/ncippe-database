@@ -15,6 +15,7 @@ CREATE TABLE `User` (
   `DateActivated` DATETIME DEFAULT NULL,
   `PortalAccountStatusCodeId` int(11) NOT NULL,
   `IsActiveBiobankParticipant` tinyint(4) NULL DEFAULT '1',
+  `PreferredLanguage` VARCHAR(2) NULL DEFAULT 'en',
   `DateDeactivated` DATETIME DEFAULT NULL,
   `LastRevisedDate` datetime NOT NULL DEFAULT NOW(),
   `LastRevisedUser` int(11) NULL,
