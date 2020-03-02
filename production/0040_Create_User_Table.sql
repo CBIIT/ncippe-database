@@ -6,6 +6,7 @@ CREATE TABLE `User` (
   `LastName` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
   `PatientID` VARCHAR(20) DEFAULT NULL,
+  `PatientDOB` DATE DEFAULT NULL,
   `OpenCtepID` INT(11) NULL DEFAULT NULL,
   `PhoneNumber` varchar(10) DEFAULT NULL,
   `AllowEmailNotification` tinyint(4) NOT NULL DEFAULT '1',
