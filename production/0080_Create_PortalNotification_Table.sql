@@ -1,8 +1,8 @@
 USE biobank;
 CREATE TABLE `PortalNotification` (
   `PortalNotificationId` INT NOT NULL AUTO_INCREMENT,
-  `MessageEnglish` VARCHAR(8192) NOT NULL,
-  `MessageSpanish` VARCHAR(8192) NOT NULL,
+  `MessageEnglish` TEXT(8192) NOT NULL,
+  `MessageSpanish` TEXT(8192) NOT NULL,
   `DateGenerated` DATETIME NOT NULL DEFAULT NOW(),
   `UserId` INT NOT NULL,
   `ViewedByUser` TINYINT NOT NULL DEFAULT 0,
