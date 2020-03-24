@@ -15,6 +15,7 @@ CREATE TABLE biobank.NCORPSite (
   PhoneNumberExtension VARCHAR(8) NULL,
   POCName VARCHAR(32)  NULL,
   POCEmail VARCHAR(128) NULL,
+  Website VARCHAR(128) NULL,
   Latitude VARCHAR(12) NOT NULL,
   Longitude VARCHAR(12) NOT NULL,
   PRIMARY KEY (NCORPSiteId),
