@@ -54,7 +54,7 @@ VALUES
 ("NC003","CHI Health Saint Francis","2620 West Faidley Avenue",NULL,"Grand Island","Nebraska","68803","Mary Gulzow","mgulzow@sfmc-gi.org","(308) 398-6518", NULL, 40.9258317, -98.3716607, 1, 1),
 (NULL,"CHI Health Saint Francis","2727 West 2nd Street", "Suite 314","Hastings","Nebraska","68901","Mary Gulzow","mgulzow@sfmc-gi.org","(308) 398-6519", NULL, 40.584710, -98.418828, 1, 1),
 
-("NC004","Alliance for Childhood Diseases/Cure 4 the Kids Foundation","One Breakthrough Way",Suite 200,"Las Vegas","Nevada","89135","Michelle Hernandez","m.hernandez@sncrf.org","(702) 384-0013","http://www.sncrf.org", 36.121212, -115.3210372, 1, 1),
+("NC004","Alliance for Childhood Diseases/Cure 4 the Kids Foundation","One Breakthrough Way","Suite 200","Las Vegas","Nevada","89135","Michelle Hernandez","m.hernandez@sncrf.org","(702) 384-0013","http://www.sncrf.org", 36.121212, -115.3210372, 1, 1),
 ("NC019","Comprehensive Cancer Centers of Nevada - Central Valley","3730 South Eastern Avenue",NULL,"Las Vegas","Nevada","89169","Diamond Rozek","d.rozek@sncrf.org","(702) 384-0013","http://www.sncrf.org", 36.1210521, -115.1182286, 1, 1),
 ("NC047","Comprehensive Cancer Centers of Nevada","9280 West Sunset Road","Suite 100","Las Vegas","Nevada","89148","Megan Mortimore","m.mortimore@sncrf.org","(702) 384-0013","http://www.sncrf.org", 36.071835, -115.2947321, 1, 1),
 ("NC081","OptumCare Cancer Care at Fort Apache","6190 South Fort Apache Road",NULL,"Las Vegas","Nevada","89148","Ed Alfaro","e.alfaro@sncrf.org","(702) 384-0013","http://www.sncrf.org", 36.0760099, -115.297002, 1, 1),
