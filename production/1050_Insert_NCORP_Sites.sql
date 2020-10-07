@@ -1,3 +1,4 @@
+DELETE FROM `biobank`.`NCORPSite`;
 INSERT INTO `biobank`.`NCORPSite`
 (`CTEPId`, `NCORPSiteName`, `StreetAddressLine1`, `StreetAddressLine2`, `City`, `State`, `ZipCode`, `POCName`,`POCEmail`,`PhoneNumber`, `Website`,`Latitude`,`Longitude`, `IsActive`,`LastRevisedUser`)
 VALUES
