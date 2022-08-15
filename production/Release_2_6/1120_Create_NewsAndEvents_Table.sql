@@ -2,6 +2,7 @@ USE biobank;
 CREATE TABLE `NewsAndEvents` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `ContentType` VARCHAR(16) NOT NULL,
+  `PublishedDate` DATETIME NOT NULL,
   `ExpirationDate` DATETIME NOT NULL,
   `Title` VARCHAR(512) NOT NULL,
   `Author` VARCHAR(128) NULL,
