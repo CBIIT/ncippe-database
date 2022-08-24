@@ -24,11 +24,11 @@ VALUES
 ("WA043","North Star Lodge Cancer Center at Yakima Valley Memorial Hospital","808 North 39th Avenue","","Yakima","Washington","98902","Beth Parker","bethparker@yvmh.org","(509) 574-3493","https://www.northstarlodge.org/","46.61208109","-120.5611631", 1, 1);
 
 -- UPDATE Sites
-UPDATE biobank.NCORPSite SET PhoneNumber = '(805) 474-9143', LastRevisedUser = 1, LastRevisedDate = NOW() WHERE CtepId = 'CA384';
-UPDATE biobank.NCORPSite SET PhoneNumber = '(515) 241-3305', POCName = 'Missy Stravers', POCEmail = 'mstravers@iora.org', LastRevisedUser = 1, LastRevisedDate = NOW() WHERE CtepId = 'IA072';
+UPDATE biobank.NCORPSite SET PhoneNumber = '(805) 474-9143', LastRevisedUser = 1, LastRevisedDate = NOW() WHERE CTEPId = 'CA384';
+UPDATE biobank.NCORPSite SET PhoneNumber = '(515) 241-3305', POCName = 'Missy Stravers', POCEmail = 'mstravers@iora.org', LastRevisedUser = 1, LastRevisedDate = NOW() WHERE CTEPId = 'IA072';
 
 UPDATE biobank.NCORPSite SET PhoneNumber = '(256) 541-1068', POCName = 'Jamie Saunders', POCEmail = 'JGSaunders@mmc.org', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId IN ('ME010',
+WHERE CTEPId IN ('ME010',
 'ME022',
 'ME031',
 'ME035',
@@ -43,18 +43,18 @@ WHERE CtepId IN ('ME010',
 'ME055');
 
 UPDATE biobank.NCORPSite SET PhoneNumber = '(405) 752-3392', POCName = 'Beverly Roy', POCEmail = 'Beverly.Roy@Mercy.net', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId IN ('MO051', 'MO097', 'MO183');
+WHERE CTEPId IN ('MO051', 'MO097', 'MO183');
 UPDATE biobank.NCORPSite SET PhoneNumber = '(816) 271-2635', POCName = 'Carri Gilmour', POCEmail = 'Carri.Gilmour@mymlc.com', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId = 'MO056';
+WHERE CTEPId = 'MO056';
 UPDATE biobank.NCORPSite SET PhoneNumber = '(973) 971-6359', POCName = 'Michelle Williams', POCEmail = 'michelle.williams@atlantichealth.org', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId IN ('NJ054','NJ246');
+WHERE CTEPId IN ('NJ054','NJ246');
 UPDATE biobank.NCORPSite SET PhoneNumber = '(702) 384-0013', POCName = 'Trinh Tran', POCEmail = 't.tran@sncrf.org', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId IN ('NV028', 'NV034','NV043', 'NV080', 'NV107', 'NV108', 'NV112', 'NV113');
+WHERE CTEPId IN ('NV028', 'NV034','NV043', 'NV080', 'NV107', 'NV108', 'NV112', 'NV113');
 UPDATE biobank.NCORPSite SET PhoneNumber = '(864) 455-6721', POCName = 'Harrison Albo', POCEmail = 'Harrison.Albo2@PrismaHealth.org', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId = 'SC045';
+WHERE CTEPId = 'SC045';
 UPDATE biobank.NCORPSite SET PhoneNumber = '(804) 628-0960', POCName = 'Natasha Titus', POCEmail = 'castellanosn@vcu.edu', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId IN ('VA010', 'VA025');
+WHERE CTEPId IN ('VA010', 'VA025');
 UPDATE biobank.NCORPSite SET PhoneNumber = '', POCName = '', POCEmail = '', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId = '';
+WHERE CTEPId = '';
 UPDATE biobank.NCORPSite SET PhoneNumber = '(425) 690-3503', POCName = 'Dione Froman', POCEmail = 'Dione_Froman@Valleymed.org', LastRevisedUser = 1, LastRevisedDate = NOW() 
-WHERE CtepId = 'WA004';
+WHERE CTEPId = 'WA004';
