@@ -200,16 +200,6 @@ CREATE VIEW `ChartDataView` AS
             AND `cl`.`Chart` = 'ParticipantBioMarkers');
 
 DROP VIEW if exists `ProjectSummaryView`;
-CREATE VIEW `ProjectSummaryView` AS
-    -- Participants, sites, cancertype, returned biomaker tests
- SELECT 
-    ROW_NUMBER() OVER (ORDER BY LastRevisedDate) as id, a.* from (
-select count(distinct pd.SubjectID) as 'ParticipantsCount', count(distinct pd.Site) as 'SitesCount',  
-count(distinct pd.CancerType) as 'CancerTypesCount',  
-(select count(distinct sd.SubjectID)  from SpecimenData sd where sd.DateOfUploadResults is NOT NULL) as 'BiomarkerReturnedCount' ,
-max(LastRevisedDate) AS LastRevisedDate
-from ParticpantWithCancerType pd ) AS a where 1=1;
-
 CREATE  VIEW `ProjectSummaryView` AS 
 SELECT row_number() OVER (ORDER BY `a`.`LastRevisedDate` )  AS `id`,
 `a`.`ParticipantsCount` AS `ParticipantsCount`,
