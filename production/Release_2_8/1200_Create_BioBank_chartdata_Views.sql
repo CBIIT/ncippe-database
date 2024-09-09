@@ -36,34 +36,49 @@ CREATE VIEW `ParticpantWithCancerType` AS
 
 DROP VIEW if exists `AgeDemographicsView`;
 CREATE VIEW `AgeDemographicsView` AS
-    SELECT 
-    ROW_NUMBER() OVER (ORDER BY count) as id, a.* from (
-      SELECT  (CASE
-            WHEN (`pd`.`Age` < 20) THEN '< 20'
-            WHEN ((`pd`.`Age` >= 20) AND (`pd`.`Age` < 30)) THEN '20-29'
-            WHEN ((`pd`.`Age` >= 30) AND (`pd`.`Age` < 40)) THEN '30-39'
-            WHEN ((`pd`.`Age` >= 40) AND (`pd`.`Age` < 50)) THEN '40-49'
-            WHEN ((`pd`.`Age` >= 50) AND (`pd`.`Age` < 60)) THEN '50-59'
-            WHEN ((`pd`.`Age` >= 60) AND (`pd`.`Age` < 70)) THEN '60-69'
-            WHEN ((`pd`.`Age` >= 70) AND (`pd`.`Age` < 80)) THEN '70-79'
-            WHEN ((`pd`.`Age` >= 80) AND (`pd`.`Age` < 90)) THEN '80-89'
-            WHEN (`pd`.`Age` >= 90) THEN '>=90'
-        END) AS `AgeGroup`,
-        COUNT((CASE
-            WHEN (`pd`.`Age` < 20) THEN '< 20'
-            WHEN ((`pd`.`Age` >= 20) AND (`pd`.`Age` < 30)) THEN '20-29'
-            WHEN ((`pd`.`Age` >= 30) AND (`pd`.`Age` < 40)) THEN '30-39'
-            WHEN ((`pd`.`Age` >= 40) AND (`pd`.`Age` < 50)) THEN '40-49'
-            WHEN ((`pd`.`Age` >= 50) AND (`pd`.`Age` < 60)) THEN '50-59'
-            WHEN ((`pd`.`Age` >= 60) AND (`pd`.`Age` < 70)) THEN '60-69'
-            WHEN ((`pd`.`Age` >= 70) AND (`pd`.`Age` < 80)) THEN '70-79'
-            WHEN ((`pd`.`Age` >= 80) AND (`pd`.`Age` < 90)) THEN '80-89'
-            WHEN (`pd`.`Age` >= 90) THEN '>=90'
-        END)) AS `Count`
+      SELECT 
+        `a`.`id` AS `id`,
+        `a`.`AgeGroup` AS `AgeGroup`,
+        `a`.`Count` AS `Count`
     FROM
-        `ParticipantData` `pd`
-    GROUP BY `AgeGroup`
-    ORDER BY `AgeGroup` ) as a  ORDER BY `AgeGroup` ;
+        (SELECT 
+            (CASE
+                    WHEN (`pd`.`Age` < 20) THEN 1
+                    WHEN ((`pd`.`Age` >= 20) AND (`pd`.`Age` < 30)) THEN 2
+                    WHEN ((`pd`.`Age` >= 30) AND (`pd`.`Age` < 40)) THEN 3
+                    WHEN ((`pd`.`Age` >= 40) AND (`pd`.`Age` < 50)) THEN 4
+                    WHEN ((`pd`.`Age` >= 50) AND (`pd`.`Age` < 60)) THEN 5
+                    WHEN ((`pd`.`Age` >= 60) AND (`pd`.`Age` < 70)) THEN 6
+                    WHEN ((`pd`.`Age` >= 70) AND (`pd`.`Age` < 80)) THEN 7
+                    WHEN ((`pd`.`Age` >= 80) AND (`pd`.`Age` < 90)) THEN 8
+                    WHEN (`pd`.`Age` >= 90) THEN 9
+                END) AS `id`,
+                (CASE
+                    WHEN (`pd`.`Age` < 20) THEN '< 20'
+                    WHEN ((`pd`.`Age` >= 20) AND (`pd`.`Age` < 30)) THEN '20-29'
+                    WHEN ((`pd`.`Age` >= 30) AND (`pd`.`Age` < 40)) THEN '30-39'
+                    WHEN ((`pd`.`Age` >= 40) AND (`pd`.`Age` < 50)) THEN '40-49'
+                    WHEN ((`pd`.`Age` >= 50) AND (`pd`.`Age` < 60)) THEN '50-59'
+                    WHEN ((`pd`.`Age` >= 60) AND (`pd`.`Age` < 70)) THEN '60-69'
+                    WHEN ((`pd`.`Age` >= 70) AND (`pd`.`Age` < 80)) THEN '70-79'
+                    WHEN ((`pd`.`Age` >= 80) AND (`pd`.`Age` < 90)) THEN '80-89'
+                    WHEN (`pd`.`Age` >= 90) THEN '>=90'
+                END) AS `AgeGroup`,
+                COUNT((CASE
+                    WHEN (`pd`.`Age` < 20) THEN '< 20'
+                    WHEN ((`pd`.`Age` >= 20) AND (`pd`.`Age` < 30)) THEN '20-29'
+                    WHEN ((`pd`.`Age` >= 30) AND (`pd`.`Age` < 40)) THEN '30-39'
+                    WHEN ((`pd`.`Age` >= 40) AND (`pd`.`Age` < 50)) THEN '40-49'
+                    WHEN ((`pd`.`Age` >= 50) AND (`pd`.`Age` < 60)) THEN '50-59'
+                    WHEN ((`pd`.`Age` >= 60) AND (`pd`.`Age` < 70)) THEN '60-69'
+                    WHEN ((`pd`.`Age` >= 70) AND (`pd`.`Age` < 80)) THEN '70-79'
+                    WHEN ((`pd`.`Age` >= 80) AND (`pd`.`Age` < 90)) THEN '80-89'
+                    WHEN (`pd`.`Age` >= 90) THEN '>=90'
+                END)) AS `Count`
+        FROM
+            `ParticipantData` `pd`
+        GROUP BY `AgeGroup`) `a`
+    ORDER BY `a`.`id`;
 
 DROP VIEW if exists `ChartDataView`;
 CREATE VIEW `ChartDataView` AS
